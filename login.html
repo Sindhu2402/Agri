@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login - AAPURTI PORTAL</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+body{background:#fff8dc !important; font-family:'Segoe UI',sans-serif;}
+.login-box{
+  background:white;
+  max-width:420px;
+  margin:60px auto;
+  padding:35px;
+  border-radius:18px;
+  box-shadow:0 8px 30px rgba(0,0,0,0.08);
+  transition:0.3s ease;
+}
+.login-box:hover{
+  transform:translateY(-8px);
+  box-shadow:0 20px 40px rgba(0,0,0,0.15) !important;
+}
+.login-icon{
+  width:70px; height:70px;
+  background:#e8f5e9;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:32px;
+  margin:0 auto 15px;
+}
+.form-control{
+  border-radius:12px;
+  padding:13px 16px;
+  border:1px solid #ddd;
+}
+.password-wrap{
+  position:relative;
+}
+.toggle-icon{
+  position:absolute;
+  right:15px;
+  top:50%;
+  transform:translateY(-50%);
+  cursor:pointer;
+  color:#777;
+  font-size:18px;
+}
+.btn-login{
+  background:#1e8449;
+  color:white;
+  border-radius:12px;
+  padding:13px;
+  font-weight:600;
+  border:none;
+  width:100%;
+  box-shadow:0 4px 12px rgba(30,132,73,0.3);
+}
+.hint-box{
+  background:#fff8dc;
+  border:1px dashed #d4a017;
+  border-radius:10px;
+  padding:12px;
+  font-size:13px;
+  margin-top:20px;
+}
+.social-row{background:#fff8dc !important; display:flex; justify-content:center; gap:35px; padding:18px 0; border-top:1px solid #f0e6b8;}
+.social-row a{color:#111; font-size:26px;}
+.footer-links{background:#fff8dc !important; padding:40px 0; border-top:1px solid #f0e6b8;}
+</style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg" style="background:blue;">
+  <div class="container">
+    <a class="navbar-brand text-white fw-bold">AAPURTI AGRI BUSINESS</a>
+    <button class="navbar-toggler bg-white" data-bs-toggle="collapse" data-bs-target="#nav"><span class="navbar-toggler-icon"></span></button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link text-white" href="dashboard.html">Dashboard</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="leadmanagement.html">Lead Management</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="teammanagement .html">Team Management</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="report.html">Report</a></li>
+         <li class="nav-item"><a class="nav-link text-white" href="register.html">Register</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="login.html">Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container" style="background:#fff8dc;">
+  <div class="login-box">
+    <div class="login-icon">🔐</div>
+    <h4 class="text-center fw-bold">AAPURTI Portal Login</h4>
+    
+    <form id="loginForm" class="mt-4">
+      <div class="mb-3">
+        <label class="form-label fw-semibold">Registered Email</label>
+        <input type="email" id="email" class="form-control" placeholder="Enter email" required>
+      </div>
+      <div class="mb-3">
+        <label class="form-label fw-semibold">Password</label>
+        <div class="password-wrap">
+          <input type="password" id="password" class="form-control" placeholder="Enter password" required>
+          <i class="fa fa-eye toggle-icon" id="togglePass" onclick="togglePassword()"></i>
+        </div>
+      </div>
+
+      <div class="d-flex justify-content-between align-items-center mb-3">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="remember">
+          <label class="form-check-label small" for="remember">Remember me</label>
+        </div>
+        <a href="#" class="small text-success text-decoration-none">Forgot Password?</a>
+      </div>
+
+      <button type="submit" class="btn-login mt-2">Login</button>
+      <button type="reset" class="btn btn-outline-secondary w-100 mt-2" style="border-radius:12px; padding:12px;">Reset</button>
+    </form>
+
+    <div class="hint-box">
+      <small class="fw-bold">Demo Login:</small><br>
+      <code>aapurti@hr.com / admin123</code><br>
+      <code>employee@hr.com / employee123</code>
+    </div>
+  </div>
+</div>
+
+<div class="footer-links mt-5">
+  <div class="container">
+    <div class="row text-center text-md-start">
+      <div class="col-md-4"><h6 class="fw-bold">AAPURTI AGRI BUSINESS</h6><a class="d-block text-muted small text-decoration-none">Dashboard</a><a class="d-block text-muted small text-decoration-none">Lead Management</a><a class="d-block text-muted small text-decoration-none">Team Management</a><a class="d-block text-muted small text-decoration-none">About</a><a class="d-block text-muted small text-decoration-none">Report</a><br></div>
+      <div class="col-md-4"><h6 class="fw-bold">SUPPORT</h6><a class="d-block text-muted small text-decoration-none">Privacy Policy</a><a class="d-block text-muted small text-decoration-none">FAQs</a><a class="d-block text-muted small text-decoration-none">Help Center</a><a class="d-block text-muted small text-decoration-none">Legal</a><br></div>
+      <div class="col-md-4"><h6 class="fw-bold">DEVELOPERS</h6><a class="d-block text-muted small text-decoration-none">Press</a><a class="d-block text-muted small text-decoration-none">Careers</a><a class="d-block text-muted small text-decoration-none">Blog</a><a class="d-block text-muted small text-decoration-none">Terms</a></div>
+    </div>
+  </div>
+</div>
+
+<div class="social-row">
+  <a href="#"><i class="fab fa-facebook"></i></a>
+  <a href="#"><i class="fab fa-linkedin"></i></a>
+  <a href="#"><i class="fab fa-whatsapp"></i></a>
+  <a href="#"><i class="fab fa-instagram"></i></a>
+  <a href="#"><i class="fab fa-twitter"></i></a>
+</div>
+
+<footer class="bg-dark text-white py-3 text-center"><small>AAPURTI AGRI BUSINESS © 2025 All rights reserved.</small></footer>
+
+<script>
+function togglePassword(){
+  let passInput = document.getElementById("password");
+  let icon = document.getElementById("togglePass");
+  if(passInput.type === "password"){
+    passInput.type = "text";
+    icon.classList.remove("fa-eye");
+    icon.classList.add("fa-eye-slash");
+  } else {
+    passInput.type = "password";
+    icon.classList.remove("fa-eye-slash");
+    icon.classList.add("fa-eye");
+  }
+}
+
+document.getElementById("loginForm").addEventListener("submit", function(e){
+  e.preventDefault();
+  let email = document.getElementById("email").value.trim();
+  let pass = document.getElementById("password").value.trim();
+  if(email === "aapurti@hr.com" && pass === "admin123"){
+    alert("Welcome Admin!");
+    window.location.href = "dashboard.html";
+  } else if(email === "employee@hr.com" && pass === "employee123"){
+    alert("Welcome Employee!");
+    window.location.href = "employee.html";
+  } else{
+    alert("Invalid Email or Password!");
+  }
+});
+</script>
+
+</body>
+</html>
